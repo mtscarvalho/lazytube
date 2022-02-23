@@ -20,6 +20,7 @@
     "@parcel/packager-raw-url": "^2.0.1",
     "@parcel/transformer-webmanifest": "^2.0.1",
     "autoprefixer": "^10.4.0",
+    "ga-lite": "^2.1.5",
     "parcel": "^2.0.1",
     "parcel-plugin-ogimage": "^1.2.0",
     "postcss": "^8.4.5",

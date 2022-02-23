@@ -1,3 +1,12 @@
+const galite = require('ga-lite');
+
+galite('create', 'UA-221308577-1', 'auto');
+galite('send', 'pageview');
+
+/**
+ *
+ */
+
 const form = document.querySelector('.form');
 const defaultVideoId = 'Y8Wp3dafaMQ';
 const defaultVideoTitle = 'The Dark Knight Rises: What Went Wrong?';
