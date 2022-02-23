@@ -2,7 +2,7 @@ const form = document.querySelector('.form');
 const defaultVideoId = 'Y8Wp3dafaMQ';
 const defaultVideoTitle = 'The Dark Knight Rises: What Went Wrong?';
 
-const codeBlocks = document.querySelectorAll('[data-snippet=html]');
+const codeBlocks = document.querySelectorAll('[data-snippet]');
 const htmlCode = document.querySelector('[data-snippet=html] code');
 const cssCode = document.querySelector('[data-snippet=css] code');
 
