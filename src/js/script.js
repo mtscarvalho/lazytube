@@ -4,15 +4,8 @@ const defaultVideoTitle = 'The Dark Knight Rises: What Went Wrong?';
 
 const codeBlocks = document.querySelectorAll('[data-snippet]');
 const htmlCode = document.querySelector('[data-snippet=html] code');
-const cssCode = document.querySelector('[data-snippet=css] code');
 
 const videoPreview = document.querySelector('.video');
-const videoUrl = document.getElementById('input-url').value;
-const videoTitle = document.getElementById('input-name').value;
-const videoImage = document.getElementById('input-image').value;
-const videoId = videoUrl.match(
-  /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/
-)[7];
 
 /**
  *
@@ -63,6 +56,13 @@ const feedbackAnimation = () => {
  */
 
 const generateEmbed = () => {
+  const videoUrl = document.getElementById('input-url').value;
+  const videoTitle = document.getElementById('input-name').value;
+  const videoImage = document.getElementById('input-image').value;
+  const videoId = videoUrl.match(
+    /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/
+  )[7];
+
   updateVideo(videoId, videoTitle, videoImage);
   feedbackAnimation();
 };
