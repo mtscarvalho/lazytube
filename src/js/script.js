@@ -1,24 +1,13 @@
 const galite = require('ga-lite');
-
 galite('create', 'UA-221308577-1', 'auto');
 galite('send', 'pageview');
-
-/**
- *
- */
 
 const form = document.querySelector('.form');
 const defaultVideoId = 'Y8Wp3dafaMQ';
 const defaultVideoTitle = 'The Dark Knight Rises: What Went Wrong?';
-
 const codeBlocks = document.querySelectorAll('[data-snippet]');
 const htmlCode = document.querySelector('[data-snippet=html] code');
-
 const videoPreview = document.querySelector('.video');
-
-/**
- *
- */
 
 const iframeCode = (id, title, image) => {
   const defaultThumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
@@ -35,20 +24,12 @@ const iframeCode = (id, title, image) => {
 </iframe>`;
 };
 
-/**
- *
- */
-
 const updateVideo = (id, title, image) => {
   videoPreview.innerHTML = iframeCode(id, title, image);
   htmlCode.innerHTML = iframeCode(id, title, image)
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 };
-
-/**
- *
- */
 
 const feedbackAnimation = () => {
   const addAnimantion = (el) => el.setAttribute('data-animate', '');
@@ -59,10 +40,6 @@ const feedbackAnimation = () => {
     codeBlocks.forEach((codeBlock) => removeAnimation(codeBlock));
   }, 500);
 };
-
-/**
- *
- */
 
 const generateEmbed = () => {
   const videoUrl = document.getElementById('input-url').value;
@@ -75,10 +52,6 @@ const generateEmbed = () => {
   updateVideo(videoId, videoTitle, videoImage);
   feedbackAnimation();
 };
-
-/**
- *
- */
 
 const copyClipboard = (snippet) => {
   const codeBlock = document.querySelector(`[data-snippet=${snippet}]`);
@@ -99,10 +72,6 @@ const copyClipboard = (snippet) => {
 
 copyClipboard('html');
 copyClipboard('css');
-
-/**
- *
- */
 
 window.onload = () => {
   form.onsubmit = generateEmbed;
