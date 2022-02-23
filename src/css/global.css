@@ -1,0 +1,44 @@
+:root {
+  --color-primary: #F12B24;
+  --color-primary-hover: #DD2822;
+  --color-secondary: #212121;
+  --color-tertiary: #F0F0F0;
+  --color-border: #757575;
+  --color-placeholder: #979797;
+}
+
+* {
+  border: 0;
+  box-sizing: border-box;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 3px;
+}
+
+body {
+  color: var(--color-secondary);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (min-width: 60rem) {
+  body {
+    font-size: 1.125rem;
+  }
+}

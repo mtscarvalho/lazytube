@@ -1,0 +1,19 @@
+.header {
+  padding: 2rem 0 3rem;
+}
+
+.header .brand {
+  max-width: 10rem;
+}
+
+.header .brand-loading {
+  max-width: 10rem;
+  animation: rotating 10s linear infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotating {
+  from {transform: rotate(0deg)}
+  to   {transform: rotate(360deg)}
+}
