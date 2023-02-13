@@ -1,0 +1,31 @@
+.header {
+}
+
+.brand {
+  max-width: 10rem;
+}
+
+.brandName {
+  color: black;
+}
+
+.brandIcon {
+  color: #f12b24;
+}
+
+.brandLoading {
+  color: white;
+  max-width: 10rem;
+  animation: rotating 10s linear infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

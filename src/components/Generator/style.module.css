@@ -1,0 +1,12 @@
+.form {
+}
+
+.formFieldset {
+  border: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.formFooter {
+  margin-top: 1.5rem;
+}
