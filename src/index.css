@@ -18,7 +18,7 @@
 #root {
   display: grid;
   min-height: 100vh;
-  gap: 3rem;
+  gap: 4rem;
   grid-template-rows: auto 1fr auto;
   align-items: center;
   padding: 2rem 1.5rem;

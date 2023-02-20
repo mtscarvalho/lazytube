@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../Header';
+import Main from '../Main';
 import Generator from '../Generator';
 import Results from '../Results';
 import Footer from '../Footer';
@@ -17,7 +18,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <main>
+      <Main>
         <Generator
           videoId={videoId}
           videoTitle={videoTitle}
@@ -33,7 +34,7 @@ const App = () => {
           videoTitle={videoTitle}
           customThumbnail={customThumbnail}
         />
-      </main>
+      </Main>
       <Footer />
     </>
   );
