@@ -1,22 +1,18 @@
 import React, { useRef } from 'react';
 import style from './style.module.css';
 
-const Snippet = ({ children, language }) => {
+const Snippet = ({ children, language, status }) => {
   const codeRef = useRef(null);
 
   const copyToClipboard = () => {
     navigator.clipboard
       .writeText(codeRef.current.innerText)
-      .then(() => {
-        alert('Code copied to clipboard!');
-      })
-      .catch(() => {
-        alert('Error copying code to clipboard!');
-      });
+      .then(() => alert('Code copied to clipboard!'))
+      .catch(() => alert('Error copying code to clipboard!'));
   };
 
   return (
-    <div className={style.snippet}>
+    <div className={style.snippet} data-status={status}>
       <div className={style.snippetHeader}>
         <span className={style.snippetLanguage}>{language}</span>
         <button

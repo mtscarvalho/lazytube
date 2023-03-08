@@ -7,6 +7,18 @@
   --color-placeholder: #979797;
 }
 
+::placeholder {
+  color: var(--color-placeholder);
+}
+
+:-ms-input-placeholder {
+  color: var(--color-placeholder);
+}
+
+::-ms-input-placeholder {
+  color: var(--color-placeholder);
+}
+
 *,
 *::before,
 *::after {

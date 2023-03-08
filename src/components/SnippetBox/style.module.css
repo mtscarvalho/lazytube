@@ -17,7 +17,7 @@
   outline-offset: 3px;
 }
 
-.snippet[data-animate]::after {
+.snippet[data-status='generated']::after {
   content: '';
   animation: puff-out 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) both;
   background: var(--color-secondary);

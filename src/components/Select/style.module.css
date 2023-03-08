@@ -1,4 +1,16 @@
-.input {
+::placeholder {
+  color: var(--color-placeholder);
+}
+
+:-ms-input-placeholder {
+  color: var(--color-placeholder);
+}
+
+::-ms-input-placeholder {
+  color: var(--color-placeholder);
+}
+
+.select {
   background: #ffffff;
   border-radius: 0.25rem;
   border: var(--color-border) 1px solid;
@@ -8,8 +20,4 @@
   margin-top: 0.5rem;
   padding: 0.7em 1em;
   width: 100%;
-}
-
-.caption {
-  font-size: 0.875rem;
 }

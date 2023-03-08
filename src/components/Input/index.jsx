@@ -1,16 +1,13 @@
 import React from 'react';
 import style from './style.module.css';
 
-const Input = ({ children, label, id, ...props }) => {
+const Input = ({ label, caption, ...props }) => {
   return (
-    <div className="field">
-      <label htmlFor={id} className={style.label}>
-        {label}
-      </label>
-      <input className={style.input} {...props} id={id}>
-        {children}
-      </input>
-    </div>
+    <label>
+      {label}
+      <input className={style.input} {...props} />
+      <span className={style.caption}>{caption}</span>
+    </label>
   );
 };
 
